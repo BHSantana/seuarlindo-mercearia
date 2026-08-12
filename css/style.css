@@ -64,14 +64,19 @@ nav a {
     display: flex;
     justify-content: center;
     gap: 20px;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .produto {
-    width: 200px;
+    width: 220px;
     padding: 20px;
     border: 1px solid #cccccc;
     border-radius: 8px;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 .produto-imagem {
@@ -93,4 +98,19 @@ nav a {
     background-color: var(--cor-primaria);
     color: white;
     cursor: pointer;
+    margin-top: auto;
+}
+
+@media (max-width: 600px) {
+
+    .produtos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        width: 90%;
+        max-width: 320px;
+    }
+
 }
